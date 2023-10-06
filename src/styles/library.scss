@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+@mixin format() {
+    *{
+        margin: 0;
+        padding: 0;
+        color: $font-color;
+        font-family: 'Kurosawa Serif', sans-serif;
+    }
+}
+
+@mixin pageColors() {
+    body {
+        background-color: $bg-color;
+    }
+}
