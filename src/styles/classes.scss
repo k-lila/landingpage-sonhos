@@ -1,0 +1,49 @@
+.container {
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.opening {
+    &__img {
+        height: 100vh;
+    }
+    &--fadeout {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 2s, opacity 2s linear;
+    }
+    &--hidden {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.poster {
+    background-color: $bg-poster;
+    text-align: center;
+    
+    &__img {
+        width: 100%;
+    }
+
+    &__poem {
+        margin: 3% 0;
+        font-size: 120%;
+        line-height: 200%;
+    }
+
+    &__title {
+        font-size: 500%;
+    }
+
+    &__signature {
+        filter: invert(100%);
+        width: 25%;
+        margin-bottom: -5px;
+    }
+
+    &--hidden {
+        display: none;
+    }
+}

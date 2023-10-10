@@ -1,4 +1,6 @@
 @import './library.scss';
+@import './classes.scss';
 
-@include format();
-@include pageColors();  
+@include initial_parameters();
+@include pageColors();
+

@@ -4,7 +4,7 @@ const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
-const obfuscate = require('gulp-obfuscate');
+const obfuscate = require('gulp-obfuscate')
 
 // --------------------------------------------- //
 gulp.task('buildStyle', function() {
@@ -26,7 +26,6 @@ gulp.task('minImages', function() {
 // ---------------------------------- //
 gulp.task('minHtml', function() {
     return gulp.src('./src/index.html')
-    
     .pipe(htmlmin({
         collapseWhitespace: true,
         removeComments: true
@@ -37,10 +36,9 @@ gulp.task('minHtml', function() {
 gulp.task('compressJS', function() {
     return gulp.src('./src/scripts/*.js')
     .pipe(uglify())
-    .pipe(obfuscate())
+    // .pipe(obfuscate())
     .pipe(gulp.dest('./build/scripts'))
-
-})
+});
 // ------------------------------------------------ //
 gulp.task('build', gulp.series(
     function(done) {console.log('building'), done()},
