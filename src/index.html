@@ -4,39 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonhos</title>
-    <link rel="shortcut icon" href="./images/yume_.png">
+    <link rel="shortcut icon" href="./images/yume.png">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
+
+
+
 <body>
-    <span id="opening">
-        <img class="opening__img" id="opening-img" src="./images/yume_.png" alt="Ideograma para 'sonhos'">
+    <span id="opening" class="--hidden">
+        <img class="opening__img" id="opening-img" src="./images/yume.png" alt="Ideograma para 'sonhos'">
     </span>
-    <div class="container">
+    <span id="dreaming" class="dreaming --vanish">
+        <img class="dreaming-img" src="./images/dreaming.png" alt="Uma vez tive um sonho">
+        <h1>Uma vez tive um sonho</h1>
+    </span>
+
+
+    <div id="container" class="container --vanish">
         <section id="poster" class="poster">
+            <img class="poster__img" src="./images/poster_img.png" alt="">
             <div>
-                <img class="poster__img" src="./images/picture.png" alt="">
-            </div>
-            <div>
-                <div>
-                    <p class="poster__poem">
-                        O passado, presente, e futuro<br>
-                        Os pensamentos e imagens de um homem...para todos os homens<br>
-                        Os sonhos de um homem...para todos os sonhadores<br>
-                    </p>
-                </div>
+                <p class="poster__poem">
+                    O passado, presente, e futuro<br>
+                    Os pensamentos e imagens de um homem...para todos os homens<br>
+                    Os sonhos de um homem...para todos os sonhadores<br>
+                </p>
                 <div>
                     <span>
-                        <img class="poster__signature" src="./images/assinatura_.png" alt="" srcset="">
+                        <img class="poster__signature" src="./images/assinatura_.png" alt="Assinatura">
                     </span>
                     <h1 class="poster__title">S O N H O S</h1>
                 </div>
             </div>
-
-            <div>
-                menu
+            <div id="menu" class="menu">
+                <button id="dreams-btn" class="menu__btn">Sonhos</button>
+                <button class="menu__btn">Imagens</button>
+                <button class="menu__btn">Curiosidades</button>
+                <button class="menu__btn">Sobre</button>
             </div>
-
-
+        </section>
+        <section class="dreams --vanish">
+            <div>
+                <div>
+                    <img src="./images/poster.jpg" alt="">
+                </div>
+            </div>
         </section>
     </div>
     <script type="module" src="./scripts/main.js"></script>

@@ -1,20 +1,49 @@
 export function openingScene(play) {
     if (play) {
-        console.log('ligado')
+        var device_width = window.innerWidth;
+        var device_height = window.innerHeight;
+        const reference = document.getElementById('opening');
+        if (device_width > device_height) {
+            reference.classList.add('opening--byheight')
+        } else {
+            reference.classList.add('opening--bywidth')
+        };
+        reference.classList.remove('--hidden');
         setTimeout(function() {
             document.getElementById('opening-img')
-            .classList.add('opening--fadeout');
-            console.log('classe adicionada')
+            .classList.add('--fadeout');
         }, 1000);
         setTimeout(function() {
-            document.getElementById('opening')
-            .classList.add('opening--hidden');
-            console.log('classe adicionada')
+            document.getElementById('opening').style.display = 'none';
+            document.getElementById('container').classList.remove('--vanish');
         }, 3000)
-    } else {
-        console.log('desligado')
-        document.getElementById('opening').style.display = 'none'
     }
-
 }
 
+export function openingDreaming(play) {
+    var device_width = window.innerWidth;
+    var device_height = window.innerHeight;
+    const reference = document.getElementById('dreaming');
+    const elementFadeout = document.getElementById('poster');
+
+    if (play) {
+        // if (device_width > device_height) {
+        //     reference.classList.add('dreaming--byheight')
+        // } else {
+        //     reference.classList.add('dreaming--bywidth')
+        // };
+
+        elementFadeout.classList.add('--fastout')
+
+    //     reference.classList.remove('--hidden');
+    //     setTimeout(function() {
+    //         document.getElementById('dreaming')
+    //         .classList.add('--fadeout');
+    //     }, 1000);
+    //     setTimeout(function() {
+    //         document.getElementById('dreaming').style.display = 'none'
+    //     }, 3000)
+    // } else {
+    //     document.getElementById('dreaming').style.display = 'none'
+    }
+}
