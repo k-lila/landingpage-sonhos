@@ -1,5 +1,12 @@
 @import './library.scss';
-@import './classes.scss';
+
+@import './classes/container.scss';
+@import './classes/effects.scss';
+@import './classes/opening.scss';
+@import './classes/poster.scss';
+@import './classes/menu.scss';
+@import './classes/dreaming.scss';
+
 
 @include initial_parameters();
 @include pageColors();

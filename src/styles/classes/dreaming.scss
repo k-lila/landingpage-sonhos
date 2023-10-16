@@ -1,0 +1,40 @@
+.dreaming {
+
+    opacity: 0;
+    height: 100vh;
+
+    h1 {
+        color: $font-color-secondary;
+        text-align: center;
+        font-style: italic;
+        margin-top: -5%;
+    }
+
+    &--byheight {
+        place-content: center;
+        display: grid;
+        img {
+            height: 100%;
+        }
+    }
+    &--bywidth {
+        display: grid;
+        place-content: center;
+        h1 {
+            font-size: 150%;
+        }
+        img {
+            margin-top: -100px;
+            width: 100vw;
+        }
+    }
+
+    &--fadein {
+        opacity: 1;
+    }
+
+    &--fadeout {
+        opacity: 0;
+        transition: opacity 2s;
+    }
+}

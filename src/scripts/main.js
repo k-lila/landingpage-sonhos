@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     lib.openingScene(true);
     document.getElementById('dreams-btn')
     .addEventListener('click', function() {
+        console.log('click')
         lib.openingDreaming(true);
     })
 })

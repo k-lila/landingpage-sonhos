@@ -1,49 +1,48 @@
+export function windowSize() {
+    return [window.innerWidth, window.innerHeight]
+}
+
 export function openingScene(play) {
     if (play) {
-        var device_width = window.innerWidth;
-        var device_height = window.innerHeight;
-        const reference = document.getElementById('opening');
-        if (device_width > device_height) {
-            reference.classList.add('opening--byheight')
+        var openingSpan = document.getElementById('opening-span')
+        if (window.innerWidth > window.innerHeight) {
+            openingSpan.classList.add('opening--byheight')
         } else {
-            reference.classList.add('opening--bywidth')
+            openingSpan.classList.add('opening--bywidth')
         };
-        reference.classList.remove('--hidden');
+        openingSpan.classList.remove('vanish');
         setTimeout(function() {
-            document.getElementById('opening-img')
-            .classList.add('--fadeout');
-        }, 1000);
+            openingSpan.classList.add('opening--fadeout')
+        }, 1000)
         setTimeout(function() {
-            document.getElementById('opening').style.display = 'none';
-            document.getElementById('container').classList.remove('--vanish');
+            document.getElementById('poster').classList.add('poster--fadein');
+            openingSpan.classList.add('vanish');
         }, 3000)
     }
 }
 
 export function openingDreaming(play) {
-    var device_width = window.innerWidth;
-    var device_height = window.innerHeight;
-    const reference = document.getElementById('dreaming');
-    const elementFadeout = document.getElementById('poster');
-
     if (play) {
-        // if (device_width > device_height) {
-        //     reference.classList.add('dreaming--byheight')
-        // } else {
-        //     reference.classList.add('dreaming--bywidth')
-        // };
 
-        elementFadeout.classList.add('--fastout')
+        document.getElementById('poster').classList.add('poster--fadeout');
+        setTimeout(function() {
+            document.getElementById('poster').classList.add('vanish');
+        }, 500)
 
-    //     reference.classList.remove('--hidden');
-    //     setTimeout(function() {
-    //         document.getElementById('dreaming')
-    //         .classList.add('--fadeout');
-    //     }, 1000);
-    //     setTimeout(function() {
-    //         document.getElementById('dreaming').style.display = 'none'
-    //     }, 3000)
-    // } else {
-    //     document.getElementById('dreaming').style.display = 'none'
+        var dreamingSpan = document.getElementById('dreaming-span')
+        if (window.innerWidth > window.innerHeight) {
+            dreamingSpan.classList.add('dreaming--byheight')
+        } else {
+            dreamingSpan.classList.add('dreaming--bywidth')
+        };
+
+        setTimeout(function() {
+            dreamingSpan.classList.add('dreaming--fadein')
+            dreamingSpan.classList.remove('vanish')
+        }, 1500)
+        setTimeout(function() {
+            document.getElementById('dreaming-span')
+            .classList.add('dreaming--fadeout')
+        }, 2000)
     }
 }
