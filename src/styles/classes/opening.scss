@@ -4,12 +4,13 @@
     place-content: center;
     opacity: 1;
 
-    &--byheight {
+    @media screen and (orientation: landscape) {
         img {
             height: 100vh;
         }
     }
-    &--bywidth {
+
+    @media screen and (orientation: portrait) {
         height: 100vh;
         img {
             width: 100vw;

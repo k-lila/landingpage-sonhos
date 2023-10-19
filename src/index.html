@@ -13,11 +13,11 @@
 <body>
 
     <span id="opening-span" class="vanish opening">
-        <img class="opening__img" id="opening-img" src="./images/yume.png" alt="Ideograma para 'sonhos'">
+        <img id="opening-img" src="./images/yume.png" alt="Ideograma para 'sonhos'">
     </span>
 
     <span id="dreaming-span" class="vanish dreaming">
-        <img class="dreaming-img" src="./images/dreaming.png" alt="Uma vez tive um sonho">
+        <img src="./images/dreaming.png" alt="Uma vez tive um sonho">
         <h1>Uma vez tive um sonho</h1>
     </span>
 
@@ -25,7 +25,7 @@
 
 
 
-        <section id="poster" class="poster">
+        <section id="poster" class="poster vanish">
 
             <img class="poster__img" src="./images/poster_img.png" alt="">
             
@@ -48,22 +48,48 @@
 
             <div id="menu" class="menu">
                 <button id="dreams-btn" class="menu__btn">Sonhos</button>
-                <button class="menu__btn">Imagens</button>
-                <button class="menu__btn">Curiosidades</button>
+                <button class="menu__btn">Poster</button>
                 <button class="menu__btn">Sobre</button>
             </div>
 
         </section>
 
 
-        <section class="dreams vanish">
-            <div>
-                <div>
-                    <img src="./images/poster.jpg" alt="">
+        <section id="dreams" class="dreams vanish">
+            <h1>título</h1>
+            <div class="grid-dreams">
+                <div id="img-dream-1" class="grid-dreams__item">
+                    <img src="./images/yume.png">
+                </div>
+                <div id="img-dream-2" class="grid-dreams__item">
+                    <img src="./images/yume.png">
+                </div>
+                <div id="img-dream-3" class="grid-dreams__item">
+                    <img src="./images/yume.png">
+                </div>
+                <div id="img-dream-4" class="grid-dreams__item">
+                    <img src="./images/yume.png">
+                </div>
+                <div id="meio" class="grid-dreams__item">
+                    <img src="./images/yume.png">
+                </div>
+                <div id="img-dream-5" class="grid-dreams__item">
+                    <img src="./images/yume.png">
+                </div>
+                <div id="img-dream-6" class="grid-dreams__item">
+                    <img src="./images/yume.png">
+                </div>
+                <div id="img-dream-7" class="grid-dreams__item">
+                    <img src="./images/yume.png">
+                </div>
+                <div id="img-dream-8" class="grid-dreams__item">
+                    <img src="./images/yume.png">
                 </div>
             </div>
-        </section>
+            <button id="back-btn">Voltar</button>
 
+
+        </section>
 
     </div>
     <script type="module" src="./scripts/main.js"></script>

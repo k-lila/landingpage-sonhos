@@ -1,0 +1,51 @@
+@import '../variables.scss';
+
+.dreams {
+    width: 100%;
+    padding: 5%;
+    display: block;
+    h1 {
+        color: $font-color-secondary
+    }
+
+    &--fadeout {
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+}
+
+.grid-dreams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 1s;
+
+        img {
+            width: 250px;
+            height: 250px;
+            border: 5px solid transparent;
+        }
+        img:hover {
+            border: 5px solid white;
+            transition: border 1s;
+        }
+    }
+
+    &--fadein {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+
+    &--fademid {
+        opacity: 1;
+        transition: opacity 6s;
+    }
+}
