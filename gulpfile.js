@@ -30,7 +30,7 @@ gulp.task('minHtml', function() {
         collapseWhitespace: true,
         removeComments: true
     }))
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest('./'))
 });
 // ------------------------------------ //
 gulp.task('compressJS', function() {

@@ -4,11 +4,11 @@ import * as dreams from './dreams.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     console.log('DOM content loaded');
-        opening.openingScene(false);
+        opening.openingScene(true);
     
     document.getElementById('dreams-btn')
     .addEventListener('click', function() {
-        opening.openingDreaming(false);
+        opening.openingDreaming(true);
         dreams.updateTitle()
     })
 
