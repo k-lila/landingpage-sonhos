@@ -1,17 +1,20 @@
-import * as lib from './library.js';
+import * as opening from './openings.js';
+import * as buttons from './buttons.js';
+import * as dreams from './dreams.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     console.log('DOM content loaded');
-        lib.openingScene(true);
+        opening.openingScene(false);
     
     document.getElementById('dreams-btn')
     .addEventListener('click', function() {
-        lib.openingDreaming(true);
+        opening.openingDreaming(false);
+        dreams.updateTitle()
     })
 
     document.getElementById('back-btn')
     .addEventListener('click', function() {
-        lib.backButton();
+        buttons.backButton();
     })
 
 })

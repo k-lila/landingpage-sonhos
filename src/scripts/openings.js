@@ -22,13 +22,15 @@ export function openingScene(play) {
 }
 
 function showDreams() {
-    document.getElementById('meio').classList.add('grid-dreams--fademid')
-    var list_img = [1, 2, 3, 4, 5, 6, 7, 8]
+    document.getElementById('meio').classList.add('grid-dreams--fademid');
+    document.getElementById('dream-title').classList.add('dreams--fadein');
+    document.getElementById('back-btn').classList.add('dreams--fadein');
+    var list_img = [1, 2, 3, 4, 5, 6, 7, 8];
     for (let i = list_img.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [list_img[i], list_img[j]] = [list_img[j], list_img[i]];
-    }
-    const time_fade = 400
+    };
+    const time_fade = 400;
     list_img.forEach(function(num, index) {
         setTimeout(function() {
             document.getElementById(`img-dream-${num}`).classList.add('grid-dreams--fadein');
@@ -47,11 +49,9 @@ export function openingDreaming(play) {
                 dreamingSpan.classList.add('dreaming--fadein');
             }, 100)
         }, 500);
-
         setTimeout(function() {
             dreamingSpan.classList.add('dreaming--fadeout');
         }, 1500);
-
         setTimeout(function() {
             dreamingSpan.className = ''
             dreamingSpan.classList.add('vanish', 'dreaming');
@@ -60,7 +60,6 @@ export function openingDreaming(play) {
                 showDreams();
             }, 100)
         }, 3000)
-
     } else {
         document.getElementById('poster').classList.add('poster--fadeout');
         setTimeout(function() {
@@ -71,24 +70,4 @@ export function openingDreaming(play) {
             }, 100)
         }, 500);
     }
-}
-
-export function backButton() {
-    document.getElementById('poster').className = '';
-    document.getElementById('poster').classList.add('poster', 'vanish');
-    document.getElementById('dreams').classList.add('dreams--fadeout');
-
-    setTimeout(function() {
-        document.getElementById('dreams').classList.add('vanish');
-        document.getElementById('dreams').classList.remove('dreams--fadeout');
-
-        document.querySelectorAll('.grid-dreams__item').forEach(function(item) {
-            item.classList.remove('grid-dreams--fadein', 'grid-dreams--fademid')
-        });
-
-        document.getElementById('poster').classList.remove('vanish');
-        setTimeout(function() {
-            document.getElementById('poster').classList.add('poster--fadein');
-        }, 100);
-    }, 500);
 }

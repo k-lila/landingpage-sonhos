@@ -3,39 +3,67 @@
 .dreams {
     width: 100%;
     padding: 5%;
-    display: block;
-    h1 {
-        color: $font-color-secondary
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        height: 4vh;
+        margin-bottom: 30px;
+        color: $font-color-secondary;
+        font-size: 300%;
+        opacity: 0;
+    }
+
+    &__btn {
+        font-size: 150%;
+        background-color: transparent;
+        color: $font-color-secondary;
+        opacity: 0;
+        border: none;
     }
 
     &--fadeout {
         opacity: 0;
         transition: opacity 0.5s;
     }
+
+    &--fadein {
+        opacity: 1;
+        transition: opacity 3s ease-in;
+    }
 }
 
 .grid-dreams {
+    height: 800px;
+    width: 800px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
     row-gap: 10px;
 
-
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 1s;
-
+    #meio {
         img {
-            width: 250px;
-            height: 250px;
-            border: 5px solid transparent;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: border 0.5s;
         }
         img:hover {
-            border: 5px solid white;
-            transition: border 1s;
+            border: 2px inset rgba(255, 255, 255, 0.2);
+            
+            transition: border 0.5s;
+        }
+    }
+
+    &__item {
+        opacity: 0;
+        transition: opacity 1s;
+        width: 250px;
+        height: 250px;
+        img {
+            max-width: 250px;
+            max-height: 250px;
+            border-radius: 3px;
         }
     }
 
