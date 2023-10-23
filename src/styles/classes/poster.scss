@@ -3,7 +3,8 @@
     display: block;
     background-color: $bg-poster;
     text-align: center;
-    height: 98vh;
+    margin: 0 auto;
+    height: fit-content;
     margin-top: 1vh;
     opacity: 0;
 
@@ -11,21 +12,35 @@
         width: 100%;
     }
 
-    &__poem {
-        margin: -3% 15% 3%;
-        font-size: 120%;
-        line-height: 175%;
-        font-weight: bold;
+    &__content {
+
+        p {
+            margin: -3% 15% 3%;
+            font-size: 120%;
+            line-height: 175%;
+            font-weight: bold;
+        }
+
+        img {
+            filter: invert(100%);
+            width: 25%;
+            margin-bottom: -5px;
+        }
+
+        h1 {
+            font-size: 450%;
+        }
+
     }
 
-    &__title {
-        font-size: 450%;
-    }
+    &__menu {
 
-    &__signature {
-        filter: invert(100%);
-        width: 25%;
-        margin-bottom: -5px;
+        margin: 25px 0;
+        &__btn {
+            padding: 5px 10px;
+            font-size: large;
+        }
+
     }
 
     &--fadein {
@@ -36,6 +51,30 @@
     &--fadeout {
         opacity: 0;
         transition: opacity 0.5s;
+    }
+
+    @media screen and (max-width: 576px) {
+
+        width: 95vw;
+        margin-top: 10vh;
+
+        &__content {
+            p {
+                margin-top: 1%;
+                font-size: 90%;
+            }
+            img {
+                width: 50%;
+                margin-top: 5%;
+            }
+            h1 {
+                font-size: 275%;
+            }
+        }
+
+        &__menu {
+            margin: 10%;
+        }
     }
 
 }

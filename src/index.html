@@ -7,15 +7,11 @@
     <link rel="shortcut icon" href="./build/images/transparent/yume.png">
     <link rel="stylesheet" href="./build/styles/main.css">
 </head>
-
-
-
 <body>
 
     <span id="opening-span" class="vanish opening">
         <img id="opening-img" src="./build/images/transparent/yume.png" alt="Ideograma para 'sonhos'">
     </span>
-
     <span id="dreaming-span" class="vanish dreaming">
         <img src="./build/images/transparent/dreaming.png" alt="Vi um sonho assim">
         <h1>Vi um sonho assim</h1>
@@ -23,37 +19,24 @@
 
     <div id="container" class="container">
 
-
-
         <section id="poster" class="poster vanish">
-
-            <img class="poster__img" src="./build/images/poster_img.png" alt="">
-            
-            <div>
-
-                <p class="poster__poem">
+            <img class="poster__img" src="./build/images/poster_img.png" alt="Imagem do filme estendida com IA">
+            <div class="poster__content">
+                <p>
                     O passado, presente, e futuro<br>
                     Os pensamentos e imagens de um homem...para todos os homens<br>
                     Os sonhos de um homem...para todos os sonhadores<br>
                 </p>
-
-                <div>
-                    <span>
-                        <img class="poster__signature" src="./build/images/transparent/signature.png" alt="Assinatura">
-                    </span>
-                    <h1 class="poster__title">S O N H O S</h1>
-                </div>
-
+                <img src="./build/images/transparent/signature.png" alt="Assinatura">
+                <h1>S O N H O S</h1>
             </div>
-
-            <div id="menu" class="menu">
+            <div class="poster__menu">
                 <button id="dreams-btn" class="menu__btn">Sonhos</button>
                 <button class="menu__btn">Sobre</button>
             </div>
         </section>
 
         <section id="dreams" class="dreams vanish">
-            <h1 id="dream-title" class="dreams__title"></h1>
             <div class="grid-dreams">
                 <div id="img-dream-1" class="grid-dreams__item">
                     <img src="./build/images/sonhos/sonho 1/sonho1.png">
@@ -85,6 +68,7 @@
                     <img src="./build/images/sonhos/sonho 8/sonho8.png">
                 </div>
             </div>
+            <h1 id="dream-title" class="dreams__title"></h1>
         </section>
     </div>
     <script type="module" src="./build/scripts/main.js"></script>

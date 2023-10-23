@@ -9,9 +9,9 @@
 
     &__title {
         height: 4vh;
-        margin-bottom: 30px;
+        margin-top: 30px;
         color: $font-color-secondary;
-        font-size: 300%;
+        font-size: 250%;
         opacity: 0;
     }
 
@@ -21,6 +21,9 @@
         color: $font-color-secondary;
         opacity: 0;
         border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &--fadeout {
@@ -35,35 +38,32 @@
 }
 
 .grid-dreams {
-    height: 800px;
-    width: 800px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
-
-    #meio {
-        img {
-            border: 2px solid transparent;
-            border-radius: 10px;
-            transition: border 0.5s;
-        }
-        img:hover {
-            border: 2px inset rgba(255, 255, 255, 0.2);
-            
-            transition: border 0.5s;
-        }
-    }
+    column-gap: 15px;
+    row-gap: 15px;
+    height: 80vh;
+    width: 80vh;
 
     &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         opacity: 0;
         transition: opacity 1s;
-        width: 250px;
-        height: 250px;
+
         img {
-            max-width: 250px;
-            max-height: 250px;
+            width: 100%;
+            height: 100%;
             border-radius: 3px;
+            transition: all 0.4s;
+        }
+
+        img:hover {
+            width: 98.5%;
+            height: 98.5%;
+            transition: all 0.1s;
+            margin: 1.5%;
         }
     }
 
