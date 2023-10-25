@@ -4,10 +4,9 @@
 @import './classes/effects.scss';
 @import './classes/opening.scss';
 @import './classes/poster.scss';
-@import './classes/menu.scss';
 @import './classes/dreaming.scss';
 @import './classes/dreams.scss';
-
+@import './classes/carousel.scss';
 
 @include initial_parameters();
 @include pageColors();

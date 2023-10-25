@@ -1,5 +1,6 @@
 .poster {
-
+    
+    max-width: 1000px;
     display: block;
     background-color: $bg-poster;
     text-align: center;
@@ -20,27 +21,24 @@
             line-height: 175%;
             font-weight: bold;
         }
-
         img {
             filter: invert(100%);
             width: 25%;
             margin-bottom: -5px;
         }
-
         h1 {
             font-size: 450%;
         }
-
     }
 
     &__menu {
-
         margin: 25px 0;
-        &__btn {
-            padding: 5px 10px;
-            font-size: large;
+        button {
+            padding: 10px 10px;
+            font-size: larger;
+            font-weight: bolder;
+            margin: 0 10px;
         }
-
     }
 
     &--fadein {
@@ -76,6 +74,7 @@
         &__menu {
             margin: 10%;
         }
+
     }
 
 }

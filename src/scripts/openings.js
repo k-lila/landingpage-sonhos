@@ -71,3 +71,29 @@ export function openingDreaming(play) {
         }, 500);
     }
 }
+
+export function openingCarousel() {
+    const list_titles = [
+        'Um raio de sol através da chuva',
+        'O jardim das pessegueiras',
+        'A tempestade',
+        'O túnel',
+        'Corvos',
+        'Monte Fuji em chamas',
+        'O demônio que chora',
+        'O vilarejo dos moinhos'
+    ];
+    for (let i = 1; i < 9; i++) {
+        document.getElementById(`img-dream-${i}`)
+        .addEventListener('click', function() {
+            document.getElementById('carousel-title').innerHTML = list_titles[i - 1];
+            document.getElementById('dreams').classList.add('dreams--fadeout')
+            setTimeout(function() {
+                document.getElementById('dreams').classList.add('vanish')
+            }, 500);
+            setTimeout(function() {
+                document.getElementById('carousel').classList.remove('vanish')
+            }, 600)
+        });
+    }
+}

@@ -1,0 +1,94 @@
+.carousel {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+
+    &__title {
+        background-color: rgba(255, 255, 255, 0.2);
+        position: absolute;
+        width: 100%;
+        height: 6vh;
+        top: 2vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 200%;
+            font-family: sans-serif;
+            width: 35px;
+            height: 35px;
+            margin-right: 15px;
+            opacity: 0.5;
+            transition: opacity 0.5s;
+        }
+        h1 {
+            color: white;
+            font-size: 250%;
+            padding: 2%;
+        }
+
+    }
+
+    &__img {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.2s;
+        @media screen and (max-width: 1000px) {
+            width: 100vw;
+        }
+        @media screen and (min-width: 1001px) {
+            width: 85vw;
+        }
+    }
+
+
+    &__btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+        margin: auto;
+        height: 75px;
+        background-color: white;
+        opacity: 0.5;
+        transition: opacity 0.5s;
+        border: none;
+        font-size: 300%;
+    }
+
+    &__btn:hover,
+    &__close:hover {
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+
+    #slide-prev {
+        left: 0;
+        padding-right: 20px;
+        border-radius: 0 50px 50px 0;
+    }
+    #slide-next {
+        right: 0;
+        padding-left: 20px;
+        border-radius: 50px 0 0 50px;
+    }
+
+    &--fadeout {
+        opacity: 0;
+        transition: opacity 0.1s;
+    }
+
+    &--img-hidden {
+        opacity: 1;
+        transition: opacity 0.2s;
+    }
+
+}
