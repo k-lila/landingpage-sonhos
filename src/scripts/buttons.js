@@ -4,7 +4,6 @@ export function backButton() {
     document.getElementById('dreams').classList.add('dreams--fadeout');
     document.getElementById('dream-title').innerHTML = '';
     document.getElementById('dream-title').classList.remove('dreams--fadein');
-    document.getElementById('dream-title').classList.remove('dreams--fadein');
     document.getElementById('back-btn').classList.remove('dreams--fadein');
 
     setTimeout(function() {
@@ -29,4 +28,18 @@ export function closeCarousel() {
         document.getElementById('carousel').classList.remove('carousel--fadeout');
         document.getElementById('dreams').classList.remove('vanish', 'dreams--fadeout');
     }, 100);
+}
+
+export function closeSobre() {
+    document.getElementById('poster').className = '';
+    document.getElementById('poster').classList.add('poster', 'vanish');
+    document.getElementById('sobre').classList.add('sobre--fadeout');
+    setTimeout(function() {
+        document.getElementById('sobre').classList.add('vanish');
+        document.getElementById('sobre').classList.remove('sobre--fadein', 'sobre--fadeout');
+        document.getElementById('poster').classList.remove('vanish');
+        setTimeout(function() {
+            document.getElementById('poster').classList.add('poster--fadein');
+        }, 100);
+    }, 500)
 }

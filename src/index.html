@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./build/styles/main.css">
 </head>
 <body>
-
     <span id="opening-span" class="vanish opening">
         <img id="opening-img" src="./build/images/transparent/yume.png" alt="Ideograma para 'sonhos'">
     </span>
@@ -16,9 +15,7 @@
         <img src="./build/images/transparent/dreaming.png" alt="Vi um sonho assim">
         <h1>Vi um sonho assim</h1>
     </span>
-
     <div id="container" class="container">
-
         <section id="poster" class="poster vanish">
             <img class="poster__img" src="./build/images/poster_img.png" alt="Imagem do filme estendida com IA">
             <div class="poster__content">
@@ -32,10 +29,9 @@
             </div>
             <div class="poster__menu">
                 <button id="dreams-btn" class="menu__btn">Sonhos</button>
-                <button class="menu__btn">Sobre</button>
+                <button id="sobre-btn" class="menu__btn">Sobre</button>
             </div>
         </section>
-
         <section id="dreams" class="dreams vanish">
             <div class="grid-dreams">
                 <div id="img-dream-1" class="grid-dreams__item">
@@ -70,12 +66,11 @@
             </div>
             <h1 id="dream-title" class="dreams__title"></h1>
         </section>
-
         <section id="carousel" class="carousel vanish">
             <div class="carousel__title">
                 <h1 id="carousel-title"></h1>
-                <button id="carousel-close">
-                    x
+                <button class="carousel__close" id="carousel-close">
+                    <img src="./build/images/transparent/close.png" alt="close">
                 </button>
             </div>
             <button id="slide-prev" class="carousel__btn">
@@ -86,9 +81,15 @@
             </button>
             <img class="carousel__img" id="carousel-img" alt="imagem do filme">
         </section>
-
+        <section id="sobre" class="sobre vanish">
+            <header class="sobre__header">
+                <h1>Sonhos, de Akira Kurosawa</h1>
+                <button id="sobre-close" class="sobre__btn">
+                    <img src="./build/images/transparent/close.png" alt="close">
+                </button>
+            </header>
+        </section>
     </div>
-
     <script type="module" src="./build/scripts/main.js"></script>
 </body>
 </html> 

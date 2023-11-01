@@ -5,16 +5,14 @@ import { carouselDreams } from './carousel.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     console.log('DOM content loaded');
-    opening.openingScene(false);
+    opening.openingScene(true);
     opening.openingCarousel()
-
     dreams.updateTitle();
-
     carouselDreams();
 
     document.getElementById('dreams-btn')
     .addEventListener('click', function() {
-        opening.openingDreaming(false);
+        opening.openingDreaming(true);
     });
 
     document.getElementById('back-btn')
@@ -27,5 +25,14 @@ document.addEventListener("DOMContentLoaded", function() {
         buttons.closeCarousel();
     })
 
+    document.getElementById('sobre-btn')
+    .addEventListener('click', function() {
+        opening.openingSobre()
+    })
+
+    document.getElementById('sobre-close')
+    .addEventListener('click', function() {
+        buttons.closeSobre()
+    })
 
 })

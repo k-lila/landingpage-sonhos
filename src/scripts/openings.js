@@ -1,22 +1,35 @@
 
+function vanish(trueFalse, id) {
+    if (trueFalse) {
+        document.getElementById(id).classList.add('vanish')
+    } else {
+        document.getElementById(id).classList.remove('vanish')
+    }
+}
+
+function classesHandler(removeAdd, id, classes) {
+    
+}
+
 export function openingScene(play) {
+    var posterClasses = document.getElementById('poster').classList
     if (play) {
         var openingSpan = document.getElementById('opening-span');
-        openingSpan.classList.remove('vanish');
+        vanish(false, 'opening-span');
         setTimeout(function() {
             openingSpan.classList.add('opening--fadeout');
         }, 1000)
         setTimeout(function() {
-            document.getElementById('poster').classList.remove('vanish');
+            vanish(false, 'poster');
             setTimeout(function() {
-                document.getElementById('poster').classList.add('poster--fadein');
+                posterClasses.add('poster--fadein');
             }, 100)
-            openingSpan.classList.add('vanish');
+            vanish(true, 'opening-span');
         }, 3000)
     } else {
-        document.getElementById('poster').classList.remove('vanish');
+        vanish(false, 'poster');
         setTimeout(function() {
-            document.getElementById('poster').classList.add('poster--fadein');
+            posterClasses.add('poster--fadein');
         }, 100)
     }
 }
@@ -43,8 +56,8 @@ export function openingDreaming(play) {
         document.getElementById('poster').classList.add('poster--fadeout');
         var dreamingSpan = document.getElementById('dreaming-span');
         setTimeout(function() {
-            document.getElementById('poster').classList.add('vanish');
-            dreamingSpan.classList.remove('vanish');
+            vanish(true, 'poster');
+            vanish(false, 'dreaming-span');
             setTimeout(function() {
                 dreamingSpan.classList.add('dreaming--fadein');
             }, 100)
@@ -53,9 +66,10 @@ export function openingDreaming(play) {
             dreamingSpan.classList.add('dreaming--fadeout');
         }, 1500);
         setTimeout(function() {
-            dreamingSpan.className = ''
-            dreamingSpan.classList.add('vanish', 'dreaming');
-            document.getElementById('dreams').classList.remove('vanish');            
+            dreamingSpan.className = '';
+            vanish(true, 'dreaming-span')
+            dreamingSpan.classList.add('dreaming');
+            vanish(false, 'dreams');
             setTimeout(function() {
                 showDreams();
             }, 100)
@@ -63,8 +77,8 @@ export function openingDreaming(play) {
     } else {
         document.getElementById('poster').classList.add('poster--fadeout');
         setTimeout(function() {
-            document.getElementById('poster').classList.add('vanish');
-            document.getElementById('dreams').classList.remove('vanish');
+            vanish(true, 'poster');
+            vanish(false, 'dreams');
             setTimeout(function() {
                 showDreams()
             }, 100)
@@ -89,11 +103,22 @@ export function openingCarousel() {
             document.getElementById('carousel-title').innerHTML = list_titles[i - 1];
             document.getElementById('dreams').classList.add('dreams--fadeout')
             setTimeout(function() {
-                document.getElementById('dreams').classList.add('vanish')
+                vanish(true, 'dreams');
             }, 500);
             setTimeout(function() {
-                document.getElementById('carousel').classList.remove('vanish')
+                vanish(false, 'carousel');
             }, 600)
         });
     }
+}
+
+export function openingSobre() {
+    document.getElementById('poster').classList.add('poster--fadeout');
+    setTimeout(function() {
+        vanish(true, 'poster');
+        vanish(false, 'sobre');
+        setTimeout(function() {
+            document.getElementById('sobre').classList.add('sobre--fadein')
+        }, 100)
+    }, 500)
 }

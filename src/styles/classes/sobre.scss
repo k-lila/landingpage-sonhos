@@ -1,0 +1,27 @@
+.sobre {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    background-color: aquamarine;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin: 1%;
+        padding: 1%;
+    }
+
+    &__btn {
+        font-size: 125%;
+    }
+
+    &--fadein {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
+    &--fadeout {
+        opacity: 0;
+    }
+}
