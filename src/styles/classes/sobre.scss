@@ -3,7 +3,7 @@
     width: 100%;
     margin: 0 auto;
     opacity: 0;
-    background-color: aquamarine;
+    color: white;
 
     &__header {
         display: flex;
@@ -12,8 +12,29 @@
         padding: 1%;
     }
 
+    &__director {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5%;
+        padding: 1%;
+        background-color: rgb(20, 20, 20);
+        #portrait {
+            width: 100%;
+        }
+        #text_logo {
+            padding: 1%;
+            justify-content: center;
+        }
+    }
+
     &__btn {
-        font-size: 125%;
+        height: 35px;
+        width: 35px;
+        padding: 1px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
     }
 
     &--fadein {
@@ -23,5 +44,19 @@
 
     &--fadeout {
         opacity: 0;
+    }
+}
+
+.logo_block {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 50%;
+    a {
+        text-decoration: none;
+    }
+    img {
+        max-height: 32px;
+        border-radius: 3px;
     }
 }

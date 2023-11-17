@@ -1,75 +1,62 @@
-
-function vanish(trueFalse, id) {
-    if (trueFalse) {
-        document.getElementById(id).classList.add('vanish')
-    } else {
-        document.getElementById(id).classList.remove('vanish')
-    }
-}
-
-function classesHandler(removeAdd, id, classes) {
-    
-}
-
+import { classHandler } from './utilities.js';
+// abertura da página
 export function openingScene(play) {
     var posterClasses = document.getElementById('poster').classList
     if (play) {
-        var openingSpan = document.getElementById('opening-span');
-        vanish(false, 'opening-span');
+        classHandler(false, 'opening-span', 'vanish');
         setTimeout(function() {
-            openingSpan.classList.add('opening--fadeout');
+            classHandler(true, 'opening-span', 'opening--fadeout');
         }, 1000)
         setTimeout(function() {
-            vanish(false, 'poster');
+            classHandler(false, 'poster', 'vanish');
             setTimeout(function() {
-                posterClasses.add('poster--fadein');
+                classHandler(true, 'poster', 'poster--fadein');
             }, 100)
-            vanish(true, 'opening-span');
+            classHandler(true, 'opening-span', 'vanish');
         }, 3000)
     } else {
-        vanish(false, 'poster');
+        classHandler(false, 'poster', 'vanish');
         setTimeout(function() {
-            posterClasses.add('poster--fadein');
+            classHandler(true, 'poster', 'poster--fadein');
         }, 100)
     }
 }
-
+// adiciona o fadein para cada sonho, será usada na função seguinte
 function showDreams() {
-    document.getElementById('meio').classList.add('grid-dreams--fademid');
-    document.getElementById('dream-title').classList.add('dreams--fadein');
-    document.getElementById('back-btn').classList.add('dreams--fadein');
+    classHandler(true, 'meio', 'grid-dreams--fademid');
+    classHandler(true, 'dream-title', 'dreams--fadein');
+    classHandler(true, 'back-btn', 'dreams--fadein');
     var list_img = [1, 2, 3, 4, 5, 6, 7, 8];
     for (let i = list_img.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [list_img[i], list_img[j]] = [list_img[j], list_img[i]];
     };
-    const time_fade = 400;
+    const time_fade = 300;
     list_img.forEach(function(num, index) {
         setTimeout(function() {
-            document.getElementById(`img-dream-${num}`).classList.add('grid-dreams--fadein');
+            classHandler(true, `img-dream-${num}`, 'grid-dreams--fadein')
         }, time_fade * (index + 1))
     })
 }
-
+// função de abertura da seção dos sonhos
 export function openingDreaming(play) {
     if (play) {
-        document.getElementById('poster').classList.add('poster--fadeout');
-        var dreamingSpan = document.getElementById('dreaming-span');
+        classHandler(true, 'poster', 'poster--fadeout');
         setTimeout(function() {
-            vanish(true, 'poster');
-            vanish(false, 'dreaming-span');
+            classHandler(true, 'poster', 'vanish');
+            classHandler(false, 'dreaming-span', 'vanish');
             setTimeout(function() {
-                dreamingSpan.classList.add('dreaming--fadein');
+                classHandler(true, 'dreaming-span', 'dreaming--fadein');
             }, 100)
         }, 500);
         setTimeout(function() {
-            dreamingSpan.classList.add('dreaming--fadeout');
+            classHandler(true, 'dreaming-span', 'dreaming--fadeout');
         }, 1500);
         setTimeout(function() {
-            dreamingSpan.className = '';
-            vanish(true, 'dreaming-span')
-            dreamingSpan.classList.add('dreaming');
-            vanish(false, 'dreams');
+            document.getElementById('dreaming-span').className = '';
+            classHandler(true, 'dreaming-span', 'vanish');
+            classHandler(true, 'dreaming-span', 'dreaming');
+            classHandler(false, 'dreams', 'vanish');
             setTimeout(function() {
                 showDreams();
             }, 100)
@@ -77,15 +64,15 @@ export function openingDreaming(play) {
     } else {
         document.getElementById('poster').classList.add('poster--fadeout');
         setTimeout(function() {
-            vanish(true, 'poster');
-            vanish(false, 'dreams');
+            classHandler(true, 'poster', 'vanish');
+            classHandler(false, 'dreams', 'vanish');
             setTimeout(function() {
                 showDreams()
             }, 100)
         }, 500);
     }
 }
-
+// carousel, abertura e título
 export function openingCarousel() {
     const list_titles = [
         'Um raio de sol através da chuva',
@@ -101,24 +88,24 @@ export function openingCarousel() {
         document.getElementById(`img-dream-${i}`)
         .addEventListener('click', function() {
             document.getElementById('carousel-title').innerHTML = list_titles[i - 1];
-            document.getElementById('dreams').classList.add('dreams--fadeout')
+            classHandler(true, 'dreams', 'dreams--fadeout');
             setTimeout(function() {
-                vanish(true, 'dreams');
+                classHandler(true, 'dreams', 'vanish');
             }, 500);
             setTimeout(function() {
-                vanish(false, 'carousel');
+                classHandler(false, 'carousel', 'vanish');
             }, 600)
         });
     }
 }
-
+// abertura da seção sobre
 export function openingSobre() {
-    document.getElementById('poster').classList.add('poster--fadeout');
+    classHandler(true, 'poster', 'poster--fadeout');
     setTimeout(function() {
-        vanish(true, 'poster');
-        vanish(false, 'sobre');
+        classHandler(true, 'poster', 'vanish');
+        classHandler(false, 'sobre', 'vanish');
         setTimeout(function() {
-            document.getElementById('sobre').classList.add('sobre--fadein')
+            classHandler(true, 'sobre', 'sobre--fadein');
         }, 100)
     }, 500)
 }

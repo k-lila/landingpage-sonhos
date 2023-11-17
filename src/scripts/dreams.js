@@ -1,3 +1,5 @@
+import { classHandler } from './utilities.js';
+
 export function updateTitle() {
     const list_titles = [
         'Um raio de sol através da chuva',
@@ -15,6 +17,15 @@ export function updateTitle() {
         })
     })
     document.getElementById('meio').addEventListener('mouseover', function() {
-        document.getElementById('dream-title').innerHTML = ''
+        document.getElementById('dream-title').innerHTML = 'voltar'
+    })
+}
+
+export function hoverTitle() {
+    document.getElementById('dreams-btn').addEventListener('mouseover', function() {
+        classHandler(true, 'title-img', 'poster--title-hover');
+    });
+    document.getElementById('dreams-btn').addEventListener('mouseleave', function() {
+        classHandler(false, 'title-img', 'poster--title-hover');
     })
 }

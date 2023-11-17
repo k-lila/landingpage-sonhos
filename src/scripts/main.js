@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     opening.openingScene(true);
     opening.openingCarousel()
     dreams.updateTitle();
+    dreams.hoverTitle();
     carouselDreams();
 
     document.getElementById('dreams-btn')

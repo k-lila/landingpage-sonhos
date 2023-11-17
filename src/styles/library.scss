@@ -4,14 +4,11 @@
     *{
         margin: 0;
         padding: 0;
-        color: $font-color;
         font-family: 'Kurosawa Serif', sans-serif;
+    }
+    body {
+        background-color: black;
     }
 }
 
-@mixin pageColors() {
-    body {
-        background-color: $bg-color;
-    }
-}
 
