@@ -23,9 +23,19 @@ export function updateTitle() {
 
 export function hoverTitle() {
     document.getElementById('dreams-btn').addEventListener('mouseover', function() {
-        classHandler(true, 'title-img', 'poster--title-hover');
+        classHandler(true, 'title-poster', 'poster--title-hover');
+        console.log('in')
     });
     document.getElementById('dreams-btn').addEventListener('mouseleave', function() {
-        classHandler(false, 'title-img', 'poster--title-hover');
+        classHandler(false, 'title-poster', 'poster--title-hover');
+        console.log('out')
+    })
+}
+
+export function animationTitle() {
+    const h1Tags = document.getElementById('dreams-btn').querySelectorAll('h1');
+    h1Tags.forEach(function(tag) {
+        const numeroAleatorio = Math.floor(Math.random() * 5) + 3;
+        tag.style.animation = `levitate ${numeroAleatorio}s infinite`
     })
 }
