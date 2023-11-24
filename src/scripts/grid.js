@@ -35,15 +35,12 @@ export function hoverTitle() {
     btn_to_grid.addEventListener('mouseover', function() {
         classHandler(true, 'title-poster', 'title-poster--title-hover');
     });
-
     btn_to_grid.addEventListener('touchstart', function() {
         classHandler(true, 'title-poster', 'title-poster--title-hover');
     });
-
     btn_to_grid.addEventListener('mouseleave', function() {
         classHandler(false, 'title-poster', 'title-poster--title-hover');
     });
-
     btn_to_grid.addEventListener('touchend', function() {
         classHandler(false, 'title-poster', 'title-poster--title-hover')
     })

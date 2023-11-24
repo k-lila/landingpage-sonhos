@@ -3,8 +3,7 @@ import * as buttons from './buttons.js';
 import * as grid from './grid.js';
 import { carouselDreams } from './carousel.js';
 
-document.addEventListener("DOMContentLoaded", function() {
-
+function main() {
     const play = true
 
     console.log('DOM content loaded');
@@ -39,5 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
     .addEventListener('click', function() {
         buttons.closeSobre();
     })
+}
 
+document.addEventListener("DOMContentLoaded", function() {
+    main()
 })
