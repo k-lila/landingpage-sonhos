@@ -1,20 +1,23 @@
 import * as opening from './openings.js';
 import * as buttons from './buttons.js';
-import * as dreams from './dreams.js';
+import * as grid from './grid.js';
 import { carouselDreams } from './carousel.js';
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    const play = true
+
     console.log('DOM content loaded');
-    opening.openingScene(false);
+    opening.openingScene(play);
     opening.openingCarousel();
-    dreams.updateTitle();
-    dreams.hoverTitle();
-    dreams.animationTitle();
+    grid.updateTitle();
+    grid.hoverTitle();
+    grid.animationTitle();
     carouselDreams();
 
     document.getElementById('dreams-btn')
     .addEventListener('click', function() {
-        opening.openingDreaming(false);
+        opening.openingDreaming(play);
     });
 
     document.getElementById('back-btn')

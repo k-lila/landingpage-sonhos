@@ -12,21 +12,40 @@ export function updateTitle() {
         'O vilarejo dos moinhos'
     ];
     list_titles.forEach(function(item, index) {
-        document.getElementById(`img-dream-${index + 1}`).addEventListener('mouseover', function() {
+        const img_dream = document.getElementById(`img-dream-${index + 1}`)
+        img_dream.addEventListener('mouseover', function() {
+            document.getElementById('dream-title').innerHTML = item
+        })
+        img_dream.addEventListener('touchstart', function() {
             document.getElementById('dream-title').innerHTML = item
         })
     })
     document.getElementById('meio').addEventListener('mouseover', function() {
         document.getElementById('dream-title').innerHTML = 'voltar'
     })
+    document.getElementById('meio').addEventListener('touchstart', function() {
+        document.getElementById('dream-title').innerHTML = 'voltar'
+    })
 }
 
 export function hoverTitle() {
-    document.getElementById('dreams-btn').addEventListener('mouseover', function() {
+
+    const btn_to_grid = document.getElementById('dreams-btn')
+
+    btn_to_grid.addEventListener('mouseover', function() {
         classHandler(true, 'title-poster', 'title-poster--title-hover');
     });
-    document.getElementById('dreams-btn').addEventListener('mouseleave', function() {
+
+    btn_to_grid.addEventListener('touchstart', function() {
+        classHandler(true, 'title-poster', 'title-poster--title-hover');
+    });
+
+    btn_to_grid.addEventListener('mouseleave', function() {
         classHandler(false, 'title-poster', 'title-poster--title-hover');
+    });
+
+    btn_to_grid.addEventListener('touchend', function() {
+        classHandler(false, 'title-poster', 'title-poster--title-hover')
     })
 }
 
