@@ -6,10 +6,22 @@
     color: white;
 
     &__header {
+        background-color: rgb(20, 20, 20);
         display: flex;
         justify-content: space-between;
-        margin: 1%;
+        margin: 10px 0;
         padding: 1%;
+        border-radius: 5px;
+        button {
+            cursor: pointer;
+            height: 35px;
+            width: 35px;
+            padding: 1px;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
     }
 
     &__director {
@@ -18,24 +30,27 @@
         gap: 5%;
         padding: 1%;
         background-color: rgb(20, 20, 20);
-        #portrait {
+        &>img {
             width: 100%;
-        }
-        #text_logo {
-            padding: 1%;
-            justify-content: center;
         }
     }
 
-    &__btn {
-        cursor: pointer;
-        height: 35px;
-        width: 35px;
-        padding: 1px;
-        img {
-            height: 100%;
-            width: 100%;
-        }
+    &__ficha {
+
+        margin-top: 20px;
+        padding: 1%;
+        background-color: rgb(20, 20, 20);
+        display: flex;
+        justify-content: space-between;
+        // img {
+        //     width: 500px;
+        // }
+        // ul {
+        //     li {
+        //         display: flex;
+        //         justify-content: space-between;
+        //     }
+        // }
     }
 
     &--fadein {

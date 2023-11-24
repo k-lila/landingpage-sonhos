@@ -23,12 +23,10 @@ export function updateTitle() {
 
 export function hoverTitle() {
     document.getElementById('dreams-btn').addEventListener('mouseover', function() {
-        classHandler(true, 'title-poster', 'poster--title-hover');
-        console.log('in')
+        classHandler(true, 'title-poster', 'title-poster--title-hover');
     });
     document.getElementById('dreams-btn').addEventListener('mouseleave', function() {
-        classHandler(false, 'title-poster', 'poster--title-hover');
-        console.log('out')
+        classHandler(false, 'title-poster', 'title-poster--title-hover');
     })
 }
 

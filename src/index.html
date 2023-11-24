@@ -9,13 +9,15 @@
 </head>
 <body>
     <span id="opening-span" class="vanish opening">
-        <img id="opening-img" src="./build/images/transparent/yume.png" alt="Ideograma para 'sonhos'">
+        <img src="./build/images/transparent/yume.png" alt="Ideograma para 'sonhos'">
     </span>
     <span id="dreaming-span" class="vanish dreaming">
         <img src="./build/images/transparent/dreaming.png" alt="Vi um sonho assim">
         <h1>Vi um sonho assim</h1>
     </span>
-    <div id="container" class="container">
+<!-- ############################################################################ -->
+    <div class="container">
+        <!-- Poster -->
         <section id="poster" class="poster vanish">
             <img class="poster__img" src="./build/images/transparent/poster_.png" alt="Imagem do filme estendida com IA">
             <div class="poster__content">
@@ -24,9 +26,9 @@
                     Os pensamentos e imagens de um homem...para todos os homens<br>
                     Os sonhos de um homem...para todos os sonhadores<br>
                 </p>
-                <img id="poster-signature" src="./build/images/transparent/signature.png" alt="Assinatura">
-                <div style="position: relative;" id="title-poster">
-                    <div id="dreams-btn">                   
+                <img src="./build/images/transparent/signature.png" alt="Assinatura">
+                <div id="title-poster" class="title-poster">
+                    <div id="dreams-btn" class="title-poster__btn">                   
                         <h1>S</h1>
                         <h1>O</h1>
                         <h1>N</h1>
@@ -34,17 +36,15 @@
                         <h1>O</h1>
                         <h1>S</h1>
                     </div>
-                    <img class="poster__dreams" src="./build/images/transparent/yume.png" alt="">
-                </div>
-
-            
-            
-            
+                    <img class="title-poster__img" src="./build/images/transparent/yume.png" alt="Ideograma para 'Sonhos'">
+                </div>            
             </div>
             <div class="poster__menu">
-                <button id="sobre-btn" class="menu__btn">Sobre</button>
+                <button id="sobre-btn">Sobre</button>
             </div>
         </section>
+<!-- ############################################################################ -->
+        <!-- Grid de sonhos -->
         <section id="dreams" class="dreams vanish">
             <div class="grid-dreams">
                 <div id="img-dream-1" class="grid-dreams__item">
@@ -79,6 +79,8 @@
             </div>
             <h1 id="dream-title" class="dreams__title"></h1>
         </section>
+<!-- ############################################################################ -->
+        <!-- Carousel -->
         <section id="carousel" class="carousel vanish">
             <div class="carousel__title">
                 <h1 id="carousel-title"></h1>
@@ -94,18 +96,21 @@
             </button>
             <img class="carousel__img" id="carousel-img" alt="imagem do filme">
         </section>
+<!-- ############################################################################ -->
+        <!-- Sobre -->
+
         <section id="sobre" class="sobre vanish">
 
             <header class="sobre__header">
                 <h1>Sonhos, de Akira Kurosawa</h1>
-                <button id="sobre-close" class="sobre__btn">
+                <button id="sobre-close">
                     <img src="./build/images/transparent/close.png" alt="close">
                 </button>
             </header>
 
             <div class="sobre__director">
                 <img id="portrait" src="./build/images/akirakurosawa.jpg" alt="Akira Kurosawa">
-                <div id="text_logo">
+                <div class="director-content">
                     <p>
                         Akira Kurosawa (em japonês: 黒澤 明, Kurosawa Akira; Tóquio, 23 de março de 1910 - Setagaya, 6 de setembro de 1998)
                         foi um dos cineastas mais importantes do Japão, e seus filmes influenciam uma grande geração de diretores.
@@ -130,9 +135,59 @@
                 </div> 
             </div>
 
-            <div>
-                
+            <div class="sobre__ficha">
+                <ul>
+                    <li><strong>Título: </strong>Sonhos</li>                
+                    <li><strong>Direção: </strong>Akira Kurosawa</li>
+                    <li><strong>Roteiro: </strong>Akira Kurosawa</li>
+                    <li><strong>Trilha sonora: </strong>Shin'ichirō Ikebe</li>
+                    <li><strong>Gênero: </strong>Fantasia/Drama</li>
+                    <li><strong>Duração: </strong>119min</li>
+                    <li><strong>Ano de lançamento: </strong>11 maio 1990 (Cannes)</li>
+                    <li><strong>País: </strong>EUA/Japão</li>
+                    <li><strong>Idioma: </strong>Japonês</li>
+                    <li><strong>Produção: </strong>
+                        Hisao Kurosawa<br>
+                        Mike Y. Inoue
+                    </li>
+                    <li><strong>Distribuição: </strong>Warner Bros</li>
+                    <li><strong>Orçamento: </strong>¥1.5 billion ($12 million)</li>
+                </ul>
+                <div>
+                    <div>
+                        <button>cannes</button>
+                        <button>eng</button>
+                        <button>jap</button>
+                    </div>
+                    <img style="width: 50%;" src="./build/images/poster/poster_cannes.png" alt="">
+                    <div>
+                        <a href="https://pt.wikipedia.org/wiki/Yume" target="_blank">
+                            <img style="background-color: white;" src="./build/images/logos/wiki.png" alt="wikipédia">
+                        </a>
+                        <a href="https://www.adorocinema.com/filmes/filme-3427/" target="_blank">
+                            <img src="./build/images/logos/adorocinema.png" alt="adorocinema">
+                        </a>
+                        <a href="https://www.imdb.com/title/tt0100998/" target="_blank">
+                            <img src="./build/images/logos/IMDB.png" alt="IMDB">
+                        </a>
+                    </div>
+                </div>
             </div>
+
+            <div class="sobre__links">
+                <h1>
+                    links para o filme completo
+                </h1>
+                <a href="https://www.youtube.com/watch?v=v6ydjwaE3xk">youtube</a>
+                <a href="https://www.primevideo.com/dp/amzn1.dv.gti.1cbaa432-4ac1-b824-8205-63c68f04126f?autoplay=0&ref_=atv_cf_strg_wb">Amazon Prime</a>
+                <a href="https://play.google.com/store/movies/details?id=v6ydjwaE3xk">Google Play</a>
+                <a href="https://tv.apple.com/br/movie/akira-kurosawas-dreams/umc.cmc.37yn14pxcslmv6eipf5td6bgv?action=play">Apple Tv</a>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bPHsu5NaVfM?si=f4O4ch5xfO1mM7bi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            </div>
+
+            <footer style="margin: 20px;">
+                <button id="sobre-close">voltar</button>
+            </footer>
 
 
         </section>
