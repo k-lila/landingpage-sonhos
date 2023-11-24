@@ -36,7 +36,7 @@
                         <h1>O</h1>
                         <h1>S</h1>
                     </div>
-                    <img class="title-poster__img" src="./build/images/transparent/yume.png" alt="Ideograma para 'Sonhos'">
+                    <img class="title-poster__img" src="./build/images/transparent/yume.png" alt="Ideograma para 'Sonhos'" draggable="false">
                 </div>            
             </div>
             <div class="poster__menu">
@@ -103,7 +103,7 @@
 
             <header class="sobre__header">
                 <h1>Sonhos, de Akira Kurosawa</h1>
-                <button id="sobre-close">
+                <button class="sobre-close">
                     <img src="./build/images/transparent/close.png" alt="close">
                 </button>
             </header>
@@ -119,8 +119,9 @@
                         pelas realizações cinematográficas.*
                     </p>
                     <div class="logo_block">
-                        <a href="https://pt.wikipedia.org/wiki/Akira_Kurosawa" target="_blank">
+                        <a style="position: relative;" href="https://pt.wikipedia.org/wiki/Akira_Kurosawa" target="_blank">
                             <img style="background-color: white;" src="./build/images/logos/wiki.png" alt="wikipédia">
+                            <span style="color: white; position: absolute; top: 0; font-size: 175%;">*</span>
                         </a>
                         <a href="https://www.adorocinema.com/personalidades/personalidade-72/" target="_blank">
                             <img src="./build/images/logos/adorocinema.png" alt="adorocinema">
@@ -136,7 +137,8 @@
             </div>
 
             <div class="sobre__ficha">
-                <ul>
+                <ul class="technical-data">
+                    <li><h2>Ficha técnica:</h2></li>
                     <li><strong>Título: </strong>Sonhos</li>                
                     <li><strong>Direção: </strong>Akira Kurosawa</li>
                     <li><strong>Roteiro: </strong>Akira Kurosawa</li>
@@ -152,15 +154,7 @@
                     </li>
                     <li><strong>Distribuição: </strong>Warner Bros</li>
                     <li><strong>Orçamento: </strong>¥1.5 billion ($12 million)</li>
-                </ul>
-                <div>
-                    <div>
-                        <button>cannes</button>
-                        <button>eng</button>
-                        <button>jap</button>
-                    </div>
-                    <img style="width: 50%;" src="./build/images/poster/poster_cannes.png" alt="">
-                    <div>
+                    <li class="logo_block">
                         <a href="https://pt.wikipedia.org/wiki/Yume" target="_blank">
                             <img style="background-color: white;" src="./build/images/logos/wiki.png" alt="wikipédia">
                         </a>
@@ -170,23 +164,29 @@
                         <a href="https://www.imdb.com/title/tt0100998/" target="_blank">
                             <img src="./build/images/logos/IMDB.png" alt="IMDB">
                         </a>
+                    </li>
+                </ul>
+                <div class="sobre-poster">
+                    <div class="sobre-poster__btn">
+                        <button id="btn-cannes">Cannes</button>
+                        <button id="btn-eng">Eng</button>
+                        <button id="btn-jap">Jap</button>
                     </div>
+                    <img id="poster_choose" src="./build/images/poster/poster_cannes.png" alt="poster">
                 </div>
             </div>
 
             <div class="sobre__links">
-                <h1>
-                    links para o filme completo
-                </h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bPHsu5NaVfM?si=f4O4ch5xfO1mM7bi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2>links para o filme completo</h2>
                 <a href="https://www.youtube.com/watch?v=v6ydjwaE3xk">youtube</a>
                 <a href="https://www.primevideo.com/dp/amzn1.dv.gti.1cbaa432-4ac1-b824-8205-63c68f04126f?autoplay=0&ref_=atv_cf_strg_wb">Amazon Prime</a>
                 <a href="https://play.google.com/store/movies/details?id=v6ydjwaE3xk">Google Play</a>
                 <a href="https://tv.apple.com/br/movie/akira-kurosawas-dreams/umc.cmc.37yn14pxcslmv6eipf5td6bgv?action=play">Apple Tv</a>
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/bPHsu5NaVfM?si=f4O4ch5xfO1mM7bi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             </div>
 
-            <footer style="margin: 20px;">
-                <button class="logo_block">voltar</button>
+            <footer class="sobre__footer">
+                <button class="sobre-close">voltar</button>
             </footer>
 
 

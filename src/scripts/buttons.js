@@ -1,3 +1,5 @@
+import { classHandler } from './utilities.js';
+
 export function backButton() {
     document.getElementById('poster').className = '';
     document.getElementById('poster').classList.add('poster', 'vanish');
@@ -42,4 +44,17 @@ export function closeSobre() {
             document.getElementById('poster').classList.add('poster--fadein');
         }, 100);
     }, 500)
+}
+
+export function posterChoose() {
+    const image = document.getElementById('poster_choose')
+    document.getElementById('btn-cannes').addEventListener('click', function() {
+        image.src = './build/images/poster/poster_cannes.png'
+    });
+    document.getElementById('btn-eng').addEventListener('click', function() {
+        image.src = './build/images/poster/poster_eng.png'
+    });
+    document.getElementById('btn-jap').addEventListener('click', function() {
+        image.src = './build/images/poster/poster_jap.png'
+    })
 }

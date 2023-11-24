@@ -4,7 +4,7 @@ import * as grid from './grid.js';
 import { carouselDreams } from './carousel.js';
 
 function main() {
-    const play = true
+    const play = false
 
     console.log('DOM content loaded');
     opening.openingScene(play);
@@ -13,6 +13,7 @@ function main() {
     grid.hoverTitle();
     grid.animationTitle();
     carouselDreams();
+    buttons.posterChoose();
 
     document.getElementById('dreams-btn')
     .addEventListener('click', function() {
@@ -34,10 +35,12 @@ function main() {
         opening.openingSobre();
     })
 
-    document.getElementById('sobre-close')
-    .addEventListener('click', function() {
+    document.querySelectorAll('.sobre-close')
+    .forEach(btn => {
+        btn.addEventListener('click', function() {
         buttons.closeSobre();
-    })
+        });
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
