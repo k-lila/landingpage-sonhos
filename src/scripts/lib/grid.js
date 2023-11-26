@@ -29,9 +29,7 @@ export function updateTitle() {
 }
 
 export function hoverTitle() {
-
     const btn_to_grid = document.getElementById('dreams-btn')
-
     btn_to_grid.addEventListener('mouseover', function() {
         classHandler(true, 'title-poster', 'title-poster--title-hover');
     });

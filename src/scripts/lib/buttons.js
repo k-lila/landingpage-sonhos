@@ -20,6 +20,7 @@ export function backButton() {
         }, 100);
     }, 500);
 };
+
 export function closeCarousel() {
     classHandler(true, 'carousel', 'carousel--fadeout');
     setTimeout(function() {
@@ -29,6 +30,7 @@ export function closeCarousel() {
         classHandler(false, 'dreams', 'dreams--fadeout')
     }, 100);
 };
+
 export function closeSobre() {
     document.getElementById('poster').className = '';
     classHandler(true, 'poster', 'poster');
@@ -44,6 +46,7 @@ export function closeSobre() {
         }, 100);
     }, 500)
 };
+
 export function posterChoose() {
     const image = document.getElementById('poster_choose')
     document.getElementById('btn-cannes').addEventListener('click', function() {

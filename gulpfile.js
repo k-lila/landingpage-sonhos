@@ -34,7 +34,7 @@ gulp.task('minHtml', function() {
 });
 // ------------------------------------ //
 gulp.task('compressJS', function() {
-    return gulp.src('./src/scripts/*.js')
+    return gulp.src('./src/scripts/**/*.js')
     .pipe(uglify())
     // .pipe(obfuscate())
     .pipe(gulp.dest('./build/scripts'))
@@ -55,5 +55,5 @@ gulp.task('default', function() {
     gulp.watch('./src/styles/**/*', {ignoreInitial: false}, gulp.series('buildStyle')),
     gulp.watch('./src/images/**/*', {ignoreInitial: false}, gulp.series('minImages')),
     gulp.watch('./src/index.html', {ignoreInitial: false}, gulp.series('minHtml')),
-    gulp.watch('./src/scripts/*.js', {ignoreInitial: false}, gulp.series('compressJS'))
+    gulp.watch('./src/scripts/**/*.js', {ignoreInitial: false}, gulp.series('compressJS'))
 })

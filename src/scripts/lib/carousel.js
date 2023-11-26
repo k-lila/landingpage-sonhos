@@ -1,4 +1,3 @@
-
 function imgBtn(soma, num) {
     var imgSrc = document.getElementById('carousel-img').src;
     var imgAtual = imgSrc.split('/').slice(-1)[0];

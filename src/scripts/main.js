@@ -1,12 +1,10 @@
-import * as opening from './openings.js';
-import * as buttons from './buttons.js';
-import * as grid from './grid.js';
-import { carouselDreams } from './carousel.js';
+import * as opening from './lib/openings.js';
+import * as buttons from './lib/buttons.js';
+import * as grid from './lib/grid.js';
+import { carouselDreams } from './lib/carousel.js';
 
 function main() {
-    const play = false
-
-    console.log('DOM content loaded');
+    const play = true;
     opening.openingScene(play);
     opening.openingCarousel();
     grid.updateTitle();
