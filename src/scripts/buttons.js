@@ -2,50 +2,48 @@ import { classHandler } from './utilities.js';
 
 export function backButton() {
     document.getElementById('poster').className = '';
-    document.getElementById('poster').classList.add('poster', 'vanish');
-    document.getElementById('dreams').classList.add('dreams--fadeout');
+    classHandler(true, 'poster', 'poster');
+    classHandler(true, 'poster', 'vanish');
+    classHandler(true, 'dreams', 'dreams--fadeout' );
     document.getElementById('dream-title').innerHTML = '';
-    document.getElementById('dream-title').classList.remove('dreams--fadein');
-    document.getElementById('back-btn').classList.remove('dreams--fadein');
-
+    classHandler(false, 'dream-title', 'dreams--fadein');
+    classHandler(false, 'back-btn', 'dreams--fadein');
     setTimeout(function() {
-        document.getElementById('dreams').classList.add('vanish');
-        document.getElementById('dreams').classList.remove('dreams--fadeout');
-
+        classHandler(true, 'dreams', 'vanish');
+        classHandler(false, 'dreams', 'dreams--fadeout');
         document.querySelectorAll('.grid-dreams__item').forEach(function(item) {
             item.classList.remove('grid-dreams--fadein', 'grid-dreams--fademid');
         });
-
-        document.getElementById('poster').classList.remove('vanish');
+        classHandler(false, 'poster', 'vanish');
         setTimeout(function() {
-            document.getElementById('poster').classList.add('poster--fadein');
+            classHandler(true, 'poster', 'poster--fadein')
         }, 100);
     }, 500);
 };
-
 export function closeCarousel() {
-    document.getElementById('carousel').classList.add('carousel--fadeout');
+    classHandler(true, 'carousel', 'carousel--fadeout');
     setTimeout(function() {
-        document.getElementById('carousel').classList.add('vanish');
-        document.getElementById('carousel').classList.remove('carousel--fadeout');
-        document.getElementById('dreams').classList.remove('vanish', 'dreams--fadeout');
+        classHandler(true, 'carousel', 'vanish')
+        classHandler(false, 'carousel', 'carousel--fadeout')
+        classHandler(false, 'dreams', 'vanish')
+        classHandler(false, 'dreams', 'dreams--fadeout')
     }, 100);
-}
-
+};
 export function closeSobre() {
     document.getElementById('poster').className = '';
-    document.getElementById('poster').classList.add('poster', 'vanish');
-    document.getElementById('sobre').classList.add('sobre--fadeout');
+    classHandler(true, 'poster', 'poster');
+    classHandler(true, 'poster', 'vanish');
+    classHandler(true, 'sobre', 'sobre--fadeout');
     setTimeout(function() {
-        document.getElementById('sobre').classList.add('vanish');
-        document.getElementById('sobre').classList.remove('sobre--fadein', 'sobre--fadeout');
-        document.getElementById('poster').classList.remove('vanish');
+        classHandler(true, 'sobre', 'vanish');
+        classHandler(false, 'sobre', 'sobre--fadein');
+        classHandler(false, 'sobre', 'sobre--fadeout');
+        classHandler(false, 'poster', 'vanish')
         setTimeout(function() {
-            document.getElementById('poster').classList.add('poster--fadein');
+            classHandler(true, 'poster', 'poster--fadein')
         }, 100);
     }, 500)
-}
-
+};
 export function posterChoose() {
     const image = document.getElementById('poster_choose')
     document.getElementById('btn-cannes').addEventListener('click', function() {

@@ -1,8 +1,7 @@
 .poster {
-
     max-width: 800px;
     display: block;
-    background-color: $bg-poster;
+    background-color:  #e5d7d7;
     text-align: center;
     margin: 0 auto;
     height: fit-content;
@@ -19,15 +18,14 @@
             margin: -5% 15% 3%;
             font-size: 120%;
             line-height: 175%;
-            font-weight: bold;
         }
         &>img {
             filter: invert(100%);
-            margin-bottom: -10px;
+            margin-bottom: -30px;
         }
     }
     &__menu {
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+        background: linear-gradient(to right,  #e5d7d7,  #e5d7d7, rgba(0, 0, 0, 0.4),  #e5d7d7,  #e5d7d7);
         margin-top: 5px;
         border-top: rgba(0, 0, 0, 0.1) solid 2px;
         button {
@@ -58,6 +56,9 @@
 
 .title-poster {
     position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    animation: oscillate 3s infinite;
     @keyframes levitate {
         0% {transform: translateY(0);}
         50% {transform: translateY(5px);}
@@ -68,13 +69,11 @@
         50% {filter: invert(50%);}
         100% {filter: invert(0%);}
     }
-    margin: 0 auto;
-    width: fit-content;
-    animation: oscillate 3s infinite;
     h1 {
         user-select: none;
-        font-size: 450%;
+        font-size: 500%;
         margin: 0 15px;
+        font-weight: lighter;
     }
     &__img {
         position: absolute;

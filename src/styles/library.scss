@@ -1,10 +1,8 @@
-@import './variables.scss';
-
 @mixin initial_parameters() {
-    *{
+    * {
         margin: 0;
         padding: 0;
-        font-family: 'Kurosawa Serif', sans-serif;
+        font-family: 'Playfair', serif;
     }
     body {
         background-color: black;
