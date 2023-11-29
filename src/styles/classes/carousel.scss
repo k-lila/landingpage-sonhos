@@ -92,3 +92,9 @@
         transition: opacity 0.2s;
     }
 }
+
+@media screen and (orientation: landscape) {
+    .carousel {
+        height: 100%;
+    }
+}
