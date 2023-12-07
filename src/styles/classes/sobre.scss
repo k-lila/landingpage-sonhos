@@ -4,7 +4,6 @@
     margin: 0 auto;
     opacity: 0;
     color: white;
-
     &__header {
         background-color: rgb(20, 20, 20);
         display: flex;
@@ -31,7 +30,6 @@
             background-color: rgba(255, 255, 255, 0.7);
         }
     }
-
     &__director {
         border-radius: 5px;
         display: grid;
@@ -52,7 +50,6 @@
             font-size: 150%;
         }
     }
-
     &__ficha {
         border-radius: 5px;
         display: grid;
@@ -66,7 +63,6 @@
             margin: 0 auto;
         }
     }
-
     &__links {
         border-radius: 5px;
         background-color: rgb(20, 20, 20);
@@ -86,7 +82,6 @@
             margin: 5px;
         }
     }
-
     &__footer {
         display: flex;
         justify-content: center;
@@ -105,12 +100,10 @@
             transition: background-color 0.2s;
         }
     }
-
     &--fadein {
         opacity: 1;
         transition: opacity 0.5s;
     }
-
     &--fadeout {
         opacity: 0;
     }
@@ -169,7 +162,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
     li {
         display: flex;
         justify-content: space-between;

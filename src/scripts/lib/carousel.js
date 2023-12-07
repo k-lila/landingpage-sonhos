@@ -1,3 +1,5 @@
+import * as opening from './openings.js'
+
 function imgBtn(soma, num) {
     var imgSrc = document.getElementById('carousel-img').src;
     var imgAtual = imgSrc.split('/').slice(-1)[0];
@@ -16,7 +18,7 @@ function imgBtn(soma, num) {
     document.getElementById('carousel-img').src = newImg;
 };
 
-export function carouselDreams() {
+function carouselDreams() {
     var numImg = 0;
     for (let i = 1; i < 9; i++) {
         document.getElementById(`img-dream-${i}`)
@@ -34,3 +36,8 @@ export function carouselDreams() {
         imgBtn(true, numImg);
     })
 };
+
+export function carousel() {
+    opening.openingCarousel();
+    carouselDreams();
+}
