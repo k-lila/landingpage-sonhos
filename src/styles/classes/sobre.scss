@@ -73,8 +73,9 @@
         font-size: 120%;
         iframe {
             margin: 2% 0;
-            width: 800px;
-            height: 500px;
+            width: 100%;
+            max-width: 800px;
+            max-height: 500px;
         }
         a {
             text-decoration: none;
