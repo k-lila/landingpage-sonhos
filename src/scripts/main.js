@@ -3,7 +3,8 @@ import { addAllButtons } from './lib/buttons.js';
 import { titleUtils } from './lib/utilities.js'
 import { carousel } from './lib/carousel.js';
 
-function main(play) {
+function main() {
+    const play = true;
     openingScene(play);
     addAllButtons(play);
     titleUtils();
@@ -11,5 +12,5 @@ function main(play) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    main(true);
+    main();
 })

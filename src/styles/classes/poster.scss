@@ -46,11 +46,15 @@
             background-color: rgba(255, 255, 255, 0.4);
             transition: all 0.2s;
             cursor: pointer;
-            border: rgba(0, 0, 0, 0.5) solid 1px;
+            border: rgba(0, 0, 0, 0.5) outset 1px;
             border-radius: 3px;
         }
-        button:hover,
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: background-color 0.2s;
+        }
         button:active {
+            border-style: inset;
             background-color: rgba(255, 255, 255, 0.3);
             transform: scale(0.96);
             transition: all 0.2s;
