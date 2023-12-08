@@ -2,19 +2,25 @@
     display: grid;
     place-content: center;
     opacity: 1;
-    @media screen and (orientation: landscape) {
+    &--fadeout {
+        opacity: 0;
+        transition: opacity 2s linear;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .opening {
         img {
             height: 100vh;
         }
     }
-    @media screen and (orientation: portrait) {
+}
+
+@media screen and (orientation: portrait) {
+    .opening {
         height: 100vh;
         img {
             width: 100vw;
         }
-    }
-    &--fadeout {
-        opacity: 0;
-        transition: opacity 2s linear;
     }
 }

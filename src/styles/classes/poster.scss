@@ -1,3 +1,15 @@
+@keyframes levitate {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(5px);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes oscillate {
+    0% {filter: invert(0%);}
+    50% {filter: invert(50%);}
+    100% {filter: invert(0%);}
+}
+
 .poster {
     max-width: 700px;
     width: 100%;
@@ -32,14 +44,16 @@
             font-size: 125%;
             border: none;
             background-color: rgba(255, 255, 255, 0.4);
-            transition: background-color 0.2s;
+            transition: all 0.2s;
             cursor: pointer;
             border: rgba(0, 0, 0, 0.5) solid 1px;
             border-radius: 3px;
         }
-        button:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-            transition: background-color 0.2s;
+        button:hover,
+        button:active {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(0.96);
+            transition: all 0.2s;
         }
     }
     &--fadein {
@@ -50,17 +64,6 @@
         opacity: 0;
         transition: opacity 0.5s;
     }
-}
-
-@keyframes levitate {
-    0% {transform: translateY(0);}
-    50% {transform: translateY(5px);}
-    100% {transform: translateY(0);}
-}
-@keyframes oscillate {
-    0% {filter: invert(0%);}
-    50% {filter: invert(50%);}
-    100% {filter: invert(0%);}
 }
 
 .title-poster {

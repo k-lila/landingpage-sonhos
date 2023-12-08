@@ -96,5 +96,10 @@
 @media screen and (orientation: landscape) {
     .carousel {
         height: 100%;
+        &__img {
+            height: 100vh;
+            width: fit-content;
+            margin: 0 auto;
+        }
     }
 }

@@ -1,24 +1,34 @@
 .dreaming {
-
     height: 100vh;
     place-content: center;
     display: grid;
     opacity: 0;
-
     h1 {
         color: white;
         text-align: center;
         font-style: italic;
         margin-top: -5%;
     }
+    &--fadein {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    &--fadeout {
+        opacity: 0;
+        transition: opacity 1.5s;
+    }
+}
 
-    @media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) {
+    .dreaming {
         img {
             height: 100%;
         }
     }
+}
 
-    @media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
+    .dreaming {
         h1 {
             font-size: 150%;
         }
@@ -27,15 +37,4 @@
             width: 100vw;
         }
     }
-
-    &--fadein {
-        opacity: 1;
-        transition: opacity 1s;
-    }
-
-    &--fadeout {
-        opacity: 0;
-        transition: opacity 1.5s;
-    }
-
 }
